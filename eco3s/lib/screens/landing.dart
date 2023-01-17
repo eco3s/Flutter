@@ -18,11 +18,11 @@ class _LandingState extends State<Landing> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) =>
-            const SignInPage(),
-            fullscreenDialog: true,
-          ),
+            MaterialPageRoute(
+              builder: (context) =>
+              const SignInPage(),
+              fullscreenDialog: true,
+            ),
         );
       },
       child: Container(

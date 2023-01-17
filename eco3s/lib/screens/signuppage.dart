@@ -1,17 +1,16 @@
 import 'dart:async';
 
 import 'package:eco3s/screens/landing.dart';
-import 'package:eco3s/screens/signuppage.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   onCLick() {
     setState(() {});
   }
@@ -114,27 +113,21 @@ class _SignInPageState extends State<SignInPage> {
                               )
                           ),
                           const SizedBox(height: 20,),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => const SignUpPage()),
-                              );
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text('처음이신가요?',
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('처음이신가요?',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.black
+                              ),),
+                              Text('회원가입',
                                 style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.black
-                                ),), Text('회원가입',
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black
-                                    ),),
-                              ],
-                            ),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black
+                                ),),
+                            ],
                           )
                         ],
                       ),
